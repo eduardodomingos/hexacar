@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "*.git"
+    "url": "https://github.com/eduardodomingos/hexacar.git"
   },
   "author": "Eduardo Domingos",
   "license": "ISC",
