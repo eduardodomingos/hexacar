@@ -1,0 +1,76 @@
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+
+/**
+ * Typographical base selectors.
+ */
+
+/**
+ * Headings 1–6.
+ */
+@include headings() {
+    @include font-weight(bold);
+    color: $color-brand;
+}
+
+
+
+
+
+/**
+ * A generic heading style which can be applied to any headings.
+ *
+ * 1. The text wrapped in a span is light
+ */
+ .heading {
+    @include font-size(20px);
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    span {
+    	@include font-weight(light); /* [1] */
+    }
+}
+
+// .heading-sub {
+//     @include font-size(14px);
+//     @include font-weight(bold);
+//     margin-bottom: 0;
+//     color: palette(gray, base);
+// }
+
+
+
+
+
+/**
+ * Emboldened elements.
+ */
+strong, b,
+dt {
+    @include font-weight(bold);
+}
+
+
+
+
+
+/**
+ * Address element.
+ */
+ address {
+ 	font-style: normal;
+ }
+
+
+
+
+
+/**
+ * Horizontal rules.
+ */
+hr {
+    border: none;
+    border-bottom: 1px solid palette(gray,medium);
+    margin-bottom: $spacing-unit - 1px;
+}

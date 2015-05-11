@@ -1,0 +1,47 @@
+///*------------------------------------*\
+//    #COLORS
+//\*------------------------------------*/
+
+// Base Colors
+
+$color-brand:       #d2232a; // vibrant red
+$color-gray:		#333;
+
+
+
+
+
+/**
+ * Color palettes.
+ *
+ * 1. Use this shade as background color.
+ * 2. Use this shade for text over a dark background.
+ * 3. Use this shade for muted text, over a white background.
+ * 4. Use this shade for UI elements, like borders. 
+ * 5. Use this shade for text over a light background.
+ * 6. Use this shade as background color.
+ */
+
+
+
+
+
+ $color-palettes: (
+	gray: (
+		xx-light 	: #f9f9f9, 			// [1]
+		x-light     : #b3b3b3, 			// [2]
+		light 		: #999,				// [3]
+		medium 		: #ddd,				// [4]
+		base 		: $color-gray,		// [5]
+		dark 		: #282b2d,			// [6]
+		x-dark 		: darken(gray, 45%) // [7]
+	)
+);
+
+
+
+
+
+// Page
+$inuit-base-background-color:   #f9f9f9;
+$inuit-base-text-color: $color-gray;
