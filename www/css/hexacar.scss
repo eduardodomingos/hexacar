@@ -75,6 +75,8 @@ $inuit-list-ui-border-color:    palette(gray,medium);
 $inuit-enable-list-ui--small:   true;
 @import "bower_components/inuit-list-ui/objects.list-ui";
 @import "bower_components/inuit-list-bare/objects.list-bare";
+@import "bower_components/inuit-list-inline/objects.list-inline";
+@import "objects.breadcrumb";
 
 
 
