@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    $BREADCRUMB
+\*------------------------------------*/
+
+.breadcrumb {
+	@extend %list-inline;
+}
+
+	.breadcrumb > li + li:before {
+		font-family: "FontAwesome";
+	    content:"\f105";
+	}
