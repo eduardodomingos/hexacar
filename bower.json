@@ -34,6 +34,7 @@
     "requirejs": "~2.1.17",
     "jquery": "~2.1.4",
     "inuit-media": "~0.4.2",
-    "dw-bxslider-4": "~4.2.3"
+    "dw-bxslider-4": "~4.2.3",
+    "inuit-list-block": "~0.4.2"
   }
 }
