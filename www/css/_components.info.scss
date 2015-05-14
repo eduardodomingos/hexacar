@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #INFO
+\*------------------------------------*/
+
+.info {
+    //padding-bottom: 0;
+
+    // @include media-query(desk) {
+    //     padding-bottom: $spacing-unit;
+    // }
+
+}
+
+    .info__block {
+        @extend %margin-bottom;
+    }
+        .info__name {
+            color: inherit;
+            @include font-weight(bold);
+            @include font-size(14px);
+            margin-bottom: $spacing-unit--small;
+        }
+
+        .info__link {
+            @extend %link-secret;
+            @include font-weight(light);
+        }
