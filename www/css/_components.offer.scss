@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    #OFFER
+\*------------------------------------*/
+.offer {
+	 @extend %margin-bottom;
+}
+	.offer__name {
+		@include font-size(14px);
+		@include ellipsis(95%);
+		margin-bottom: 0;
+		color: $color-gray;
+	}
+
+	.offer__meta {
+		@include font-weight(regular);
+		margin-bottom: 0;
+	}
+
+	.offer__price {
+		@include font-weight(bold);
+		margin-bottom: 0;
+	}
+
+	.offer__price--off {
+		@include font-weight(regular);
+		color: palette(gray,light);
+		margin-bottom: 0;
+	}
+
+	.offer-spec__name {
+		@include font-weight(bold);
+	}
+
+	.offer-spec__name--full {
+		display: block;
+	}
+
+	.offer-spec__value {
+		float: right;
+		
+		.offer-spec__name--full + & {
+			float: none;
+		}
+
+	}
