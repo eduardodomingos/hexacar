@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #OFF-CANVAS
+\*------------------------------------*/
+
+// Internal variables
+$off-canvas-width: 70%;
+
+/**
+* The off canvas component is used to show and hide the site's navigation
+* on mobile devices, and it relies on JavaScript to work.
+*/
+
+/** Outer container.
+* The outer container is the page's outermost container, wrapping everything.
+* It's used to hide any overflow and to avoid scrollbars.
+*/
+.off-canvas-outer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    
+}
+
+
+/** Inner container
+* The inner container wraps the entire page.
+*
+* 1. By default, The inner container is position on the top-left, but...
+* 2. ...when the body has the 'nav-visible' class...
+* 3. ...push the page back to the left to create room for the site's navigation.
+*/
+.off-canvas-inner {
+    position: relative;
+    left: 0; /* [1] */
+    width: 100%;
+	
+    .nav-visible & { /* [2] */
+        left: -$off-canvas-width; /* [3] */
+    }
+
+}
