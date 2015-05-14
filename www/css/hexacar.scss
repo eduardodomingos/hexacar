@@ -85,5 +85,25 @@ $inuit-enable-list-ui--small:   true;
 /**
  * #COMPONENTS
  */
+@import "components.off-canvas";
+@import "components.page-head";
+@import "components.site-nav";
+@import "components.bands";
+@import "components.services-list";
+@import "components.info";
+@import "components.socials-list";
+@import "components.page-foot";
+
+
+
+
+
+ /**
+ * #TRUMPS
+ */
+@import "bower_components/inuit-clearfix/trumps.clearfix";
+//@import "bower_components/inuit-widths/trumps.widths";
+@import "trumps.widths-responsive";
+@import "trumps.show-hide";
 
 
