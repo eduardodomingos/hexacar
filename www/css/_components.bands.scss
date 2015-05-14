@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #BANDS
+\*------------------------------------*/
+
+.band {
+    padding-top:    $spacing-unit--large;
+    padding-bottom: $spacing-unit--large;
+
+    // @include media-query(desk) {
+    //     padding-top:    $spacing-unit--large;
+    //     padding-bottom: $spacing-unit--large;
+    // }
+
+}
+
+.band--tint {
+	background-color: #f2f2f2;
+	
+}
+
+// .band--dark {
+//     background-color: palette(gray, dark);
+//     color: palette(gray, x-light);
+// }
