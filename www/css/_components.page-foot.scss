@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #PAGE-FOOT
+\*------------------------------------*/
+
+.page-foot {
+	background-color: palette(gray, dark);
+	padding: $spacing-unit--small;
+	&,
+	a {
+		color: palette(gray, x-light);
+	}
+}
+
+.page-foot__copy {
+    @include font-size(12px);
+    line-height: 1.3;
+    text-align: center;
+    display: block;
+}

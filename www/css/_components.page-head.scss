@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    #PAGE-HEAD
+\*------------------------------------*/
+
+// Internal variables
+$header-max-height: 480px;
+
+/**
+ * The site’s main page-head can have two different states:
+ *
+ * 1) Regular page-head with no backgrounds or extra treatments; it just
+ *    contains the logo and nav.
+ * 2) A masthead that has a fluid-height (becoming fixed after a certain point)
+ *    which has a large background image, and some supporting text.
+ *
+ * The regular page-head is incredibly simple, but the masthead version has some
+ * slightly intermingled dependency with the wrapper that lives inside it.
+ */
+
+.page-head {
+	@extend %margin-bottom;
+	background-color: $color-brand;
+
+}
+
+
+
+
+
+
+/**
+ * Large site headers act more like mastheads. They have a faux-fluid-height
+ * which is controlled by the wrapping element inside it.
+ *
+ * 1. We need to delegate a lot of the masthead’s layout to its wrapper element
+ *    rather than the masthead itself: it is to this wrapper that most things
+ *    are positioned.
+ * 2. The wrapper needs positioning context for us to lay our nav and masthead
+ *    text in.
+ * 3. Faux-fluid-height technique: simply create the illusion of fluid height by
+ *    creating space via a percentage padding, and then position everything over
+ *    the top of that. This percentage gives us a 3:2 ratio.
+ * 5. When the viewport is at 720px wide, our 3:2 ratio means that the masthead
+ *    is currently rendered at 480px high. Let’s…
+ * 6. …seamlessly snip off the fluid feature at this height, and…
+ * 7. …fix the height at 480px. This means that we should see no jumps in height
+ *    as the masthead moves from fluid to fixed. This actual value takes into
+ *    account the padding and the top border on the header itself.
+ * 8. Set background for homepage. 
+ * 9. Set background for about page. 
+ */
+.page-head--masthead {
+	margin-bottom: 0;
+	background: url(/img/css/masthead__home--s.jpg) center center #2e2620;
+	background-size: cover;
+	
+	> .wrapper { /* [1] */
+		position: relative; /* [2] */
+		padding-top: 66.666666667%; /* [3] */
+
+	}
+
+}

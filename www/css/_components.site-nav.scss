@@ -1,0 +1,75 @@
+/*------------------------------------*\
+    #SITE-NAV
+\*------------------------------------*/
+
+// Internal variables.
+$logo-height: 44px;
+
+
+.site-nav {
+    /**
+	 * If the site nav exists in a masthead, we absolutely position it. We have
+	 * to do this because the masthead has a fixed height, partially governed by
+	 * a faux-fluid-height technique which utilises a zeroed `height` and a
+	 * large `padding-top` value, ergo, we *have* to take the nav out of flow.
+	 */
+	 .page-head--masthead & {
+		background-color: rgba(0,0,0,0.8);
+		position: absolute;
+		top: 0 ;
+		right: 0;
+		left: 0;
+
+	 }
+	 
+}
+
+	.site-nav__home {
+		/**
+	     * This element wraps the logo, and is used to center it.
+	     *
+	     * 1. Force the the link to fill completely the logo area
+	     */
+	     text-align: center;
+
+	     > a {
+			display: inline-block; /* [1] */
+	     }
+
+	}
+
+		.site-nav__logo {
+			height: $logo-height;
+			padding: 6px 0;
+		}
+
+	.site-nav__list {
+		@extend %list-bare;
+
+		/**
+	     * 1. When is inside an off canvas component, it's absolutely positioned...
+	     * 2. ... outside the viewport.   
+	     */
+  	    .off-canvas-inner & /* [1] */ {
+	     	position: absolute;
+	     	right: -$off-canvas-width;
+	     	width: $off-canvas-width;
+	     	text-align: center;
+     	}
+	}
+
+		.site-nav__link {
+			//color: $color-gray;
+		}
+
+	.site-nav__toggle {
+		position: absolute;
+		color: #fff;
+		top: 0;
+		right: $spacing-unit--small;
+		width : $logo-height;
+		line-height: $logo-height;
+		text-align: center;
+		cursor: pointer;
+
+	}

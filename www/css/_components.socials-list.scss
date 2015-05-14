@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #SOCIALS LIST
+\*------------------------------------*/
+
+.socials-list {
+	text-align: center;
+	margin-bottom: $spacing-unit;
+}
+
+	.socials-list__item {
+		a {
+			width: $spacing-unit--large;
+			height: $spacing-unit--large;
+			line-height: $spacing-unit--large;
+			display: block;
+			text-align: center;
+		}
+	}
