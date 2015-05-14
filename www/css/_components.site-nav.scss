@@ -30,7 +30,12 @@ $logo-height: 44px;
 	     *
 	     * 1. Force the the link to fill completely the logo area
 	     */
-	     text-align: center;
+     	text-align: center;
+		
+		@include media-query(desk) {
+			text-align: initial;
+			float: left;
+		}
 
 	     > a {
 			display: inline-block; /* [1] */
@@ -55,11 +60,32 @@ $logo-height: 44px;
 	     	right: -$off-canvas-width;
 	     	width: $off-canvas-width;
 	     	text-align: center;
+			
+			@include media-query(desk) {
+     	  		position: static;
+		  		width: initial;
+	  			text-align: initial;
+	  			float: right;
+	  			@extend %list-inline;
+			}
+
      	}
 	}
 
 		.site-nav__link {
 			//color: $color-gray;
+			@include media-query(desk) {
+				color: #fff;
+				height: $logo-height;
+				line-height: $logo-height;
+				display: block;
+				@include font-weight(regular);
+				padding: 0 $spacing-unit--small;
+				text-transform: uppercase;
+			    @include attention() {
+			        text-decoration: none;
+			    }
+			}
 		}
 
 	.site-nav__toggle {
