@@ -21,7 +21,6 @@ $header-max-height: 480px;
 .page-head {
 
 	@extend %margin-bottom;
-	@extend %clearfix;
 	background-color: $color-brand;
 
 }
@@ -59,6 +58,19 @@ $header-max-height: 480px;
     border-width: $header-border-width 0 1px;
     border-top-color: #8A081A;
     border-bottom-color: #f2f2f2;
+    position: relative;
+
+    &:before {
+    	height: $logo-height;
+    	display: block;
+    	background-color: yellow;
+    	width: 100%;
+    	content:'';
+    	position: absolute;
+    	top:0;
+    	left: 0;
+    	background-color: rgba(0,0,0,0.8);
+    }
 
     @include media-query(lap-and-up) {
         background-image: url(/img/css/masthead__home--m.jpg);
