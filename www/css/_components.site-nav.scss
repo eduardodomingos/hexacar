@@ -2,11 +2,9 @@
     #SITE-NAV
 \*------------------------------------*/
 
-// Internal variables.
-$logo-height: 44px;
-
-
 .site-nav {
+
+	@extend %clearfix;
     /**
 	 * If the site nav exists in a masthead, we absolutely position it. We have
 	 * to do this because the masthead has a fixed height, partially governed by
@@ -14,12 +12,10 @@ $logo-height: 44px;
 	 * large `padding-top` value, ergo, we *have* to take the nav out of flow.
 	 */
 	 .page-head--masthead & {
-		background-color: rgba(0,0,0,0.8);
 		position: absolute;
 		top: 0 ;
 		right: 0;
 		left: 0;
-
 	 }
 	 
 }
